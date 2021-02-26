@@ -1,0 +1,227 @@
+body{
+    background:linear-gradient(to top, #d8c642, #fff6a1);
+    background-size: cover;
+    min-width: 50%;
+    max-width: 100%;
+    font-size: 20px;
+    color:rgb(1, 6, 15) ;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    animation: change-background 60s linear infinite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2:hover{
+    color: white;
+}
+
+h1:hover{
+    color:rgb(219, 219, 219);
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 30px;
+    margin-right: 0;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+
+.introText{
+    text-align: end;
+    width: 50%;
+    line-height: 30px;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.introText:hover{
+    animation: change-color 15s linear infinite;
+    font-weight: 700;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainButton{
+    width: 50vw;
+    font-size: 20px;
+    background: #ebdb51;
+    padding: 20px;
+    margin-top: 40px;
+    transition: 0.2s;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 200px 0;
+}
+
+.contentImage{
+    width: 350px;
+    margin: 25px;
+}
+
+.contentList{
+    display: inline-flex;
+    margin: 50px 0 50px 60px;
+    transition: 0.3s;
+}
+
+.contentBox{
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.contentList:hover{
+    animation: change-color  15s linear infinite;
+    transform: scale(1.05);
+}
+
+.menuButton{
+    display: block;
+    font-size: 32px;
+    border: 4px solid rgb(50,51,48);
+    padding: 25px 80px;
+    text-align: center;
+    text-decoration: none;
+    color: silver;
+    background-color: rgb(50,51,48);
+    margin: 200px;
+    transition: 0.2s;
+}
+
+.menuButton:hover{
+    transform: scale(1.01);
+}
+
+.magicJS{
+    text-shadow: 1px 1px 2px black;
+}
+
+.animation{
+    border: 2px solid rgb(146, 104, 25);
+    transition: 0.2s;
+}
+
+.animation:hover{
+    transform: scale(1.1);
+}
+
+.functions{
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 600px;
+}
+
+.functionsButtons{
+    border-radius: 10px;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
+    background-color: none;
+}
+
+.functionsButtons button{
+    border-radius: 10px;
+    width: 50vw;
+    margin-left: calc(50% - 50vw);
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 12px auto;
+    background: none;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+.functionsButtons button:hover{
+    background-color: rgba(167, 159, 159, 0.788);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.functions:hover .functionsButtons {visibility: visible;}
+
+.functions:hover .mainButton {
+    background-color: #b8b387;
+    transform: scale(1.1);
+}
+
+@keyframes change-background {
+    0% {
+      background:  linear-gradient(to top, #8d8339, #ebcd69);
+    }
+    50% {
+      background:  linear-gradient(to top, #8d8339, #fcd096);
+    }
+    100% {
+      background: linear-gradient(to top, #8d8339, #a9aa55);
+    }
+  }
+
+  @keyframes change-color {
+    0% {
+      background: rgba(132, 173, 248, 0.2) ;
+    }
+    50% {
+      background:  rgba(184, 248, 125, 0.2);
+    }
+    100% {
+      background: rgba(243, 165, 253, 0.2);
+    }
+  }
+
+.popup{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+}
+
+.popup.target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content{
+    color: rgb(54, 47, 47);
+    background-color: rgb(245, 200, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 40px;
+    max-width: 800px;
+    position: relative;
+    flex-direction: column;
+}
+
+.popup-close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
